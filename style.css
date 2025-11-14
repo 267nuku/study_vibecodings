@@ -1,0 +1,73 @@
+/*
+ *  style.css
+ *  - '나만의 작은 사치' 웹사이트 커스텀 스타일
+ *  - Hermes 스타일을 참고한 미니멀하고 고급스러운 디자인
+ */
+
+:root {
+    --primary-bg-color: #FDFDFD;
+    --text-color: #333333;
+    --muted-color: #888888;
+    --border-color: #EAE7E2;
+    --header-font: 'Cormorant Garamond', serif;
+    --body-font: 'Noto Sans KR', sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+    font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand, .display-4 {
+    font-family: var(--header-font);
+    font-weight: 600;
+}
+
+/* Navigation */
+.navbar {
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--primary-bg-color) !important;
+}
+
+.navbar-brand {
+    font-size: 1.75rem;
+    letter-spacing: 0.1em;
+}
+
+/* Main Content */
+.card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: var(--text-color);
+}
+
+.card-text {
+    color: var(--muted-color);
+    font-size: 0.9rem;
+}
+
+.card-body {
+    padding: 1.5rem 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-bg-color);
+    border-top: 1px solid var(--border-color);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.85rem;
+}
