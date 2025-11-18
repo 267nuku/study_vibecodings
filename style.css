@@ -1,8 +1,8 @@
         /* 폰트: 시스템 기본 폰트로 깔끔함을 극대화 */
         body {
-            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', sans-serif;
-            background-color: #f8f8f8; /* 깨끗한 크림색/미색 배경 */
-            color: #111111; /* 짙은 검은색 텍스트 */
+            font-family: 'Georgia', 'Times New Roman', Times, serif; /* 클래식한 폰트 적용 (나중에 한국어 폰트로 교체 가능) */
+            background-color: #ffffff; /* 배경은 깨끗한 흰색 */
+            color: #333333; /* 본문 글자색은 진한 회색으로 고급스럽게 */
         }
         /* 로고/메뉴: 샤넬처럼 얇고 미니멀한 느낌 */
         .navbar-brand, .nav-link {
@@ -10,6 +10,12 @@
             font-size: 1.1rem;
             letter-spacing: 0.1em; /* 자간 넓게 설정 */
             text-transform: uppercase;
+        }
+        /* 2. 포인트 컬러: 에르메스 오렌지 (#e57200) 적용 */
+        .navbar-brand, 
+        .nav-link:hover, 
+        .highlight-text { /* 로고, 링크 호버, 강조 텍스트에 포인트 컬러 적용 */
+            color: #e57200 !important; 
         }
         /* 메인 CTA 버튼: 절제된 포인트 컬러 (딥 블랙) */
         .btn-luxury {
@@ -25,24 +31,35 @@
             border-color: #333333;
             color: #ffffff;
         }
-        /* 누쿠앤코 전용 버튼 스타일 */
+        /* 3. 버튼 스타일: 주문하기 버튼에 오렌지 배경색 적용 (핵심!) */
         .btn-primary-nuku {
+            background-color: #e57200;
+            border-color: #e57200;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.25rem;
+            transition: background-color 0.3s;
+            /* HTML에서 btn-primary-nuku 클래스만 사용했을 때 부트스트랩 버튼처럼 보이게 추가 */
             display: inline-block;
-            background-color: #111111; /* 짙은 검은색 */
-            color: #ffffff;
-            padding: 15px 30px;
-            font-size: 1.1rem;
-            font-weight: 500;
+            font-weight: 400;
+            line-height: 1.5;
+            text-align: center;
             text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            border: 1px solid #111111;
+            vertical-align: middle;
+            cursor: pointer;
+            border: 1px solid transparent;
+            border-radius: 0.25rem;
         }
 
         .btn-primary-nuku:hover {
-            background-color: #333333;
-            color: #ffffff;
-            border-color: #333333;
+            background-color: #d16500; /* 마우스를 올리면 살짝 어두워지게 */
+            border-color: #d16500;
+        }
+
+        /* 4. 섹션 여백: 여백을 충분히 주어 고급스러움 강조 */
+        .section-padding {
+            padding-top: 80px;
+            padding-bottom: 80px;
         }
         /* 메인 비주얼 타이틀: 넓은 여백을 위해 폰트 사이즈 크게 */
         .hero-title {
