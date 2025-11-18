@@ -3,98 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>나만의 작은 사치</title>
+    <title>누쿠앤코의 작은사치상점 | 오더메이드 주얼리 쇼룸</title>
+    <!-- 🌟 Bootstrap 5 (BS5) 연결: 고급스러운 레이아웃을 위해 필수 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    
+
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid justify-content-center">
-            <a class="navbar-brand" href="#">MY LITTLE LUXURIES</a>
+    <!-- 1. 🌐 상단 메뉴 (Navbar): 깨끗하고 미니멀한 네비게이션 -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom">
+        <div class="container-fluid px-5 py-3">
+            <a class="navbar-brand fs-4 fw-bold" href="index.html">누쿠앤코의 작은사치</a>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto fs-5">
+                    <li class="nav-item me-4"><a class="nav-link active" aria-current="page" href="index.html">HOME</a></li>
+                    <li class="nav-item me-4"><a class="nav-link" href="jewelry.html">💍 오더메이드 주얼리</a></li>
+                    <li class="nav-item me-4"><a class="nav-link" href="props.html">🎁 작은 사치 소품</a></li>
+                    <li class="nav-item me-4"><a class="nav-link" href="gallery.html">후기 / 갤러리</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">문의 / 소개</a></li>
+                </ul>
+            </div>
+            <div class="d-flex">
+                <button class="btn btn-outline-dark" type="button">🛒</button>
+            </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="container my-5">
-        <div class="text-center mb-5">
-            <h1 class="display-4">순간의 즐거움</h1>
-            <p class="lead text-muted">일상 속 특별한 순간을 위한 작은 사치</p>
-        </div>
+    <!-- 2. ✨ 메인 비주얼 영역 (HERO SECTION) -->
+    <!-- 샤넬처럼, 사진 하나에 집중하는 압도적인 구성 -->
+    <main class="container-fluid p-0">
+        <section class="hero-visual mb-5">
+            <!-- 고화질 제품 사진이 들어갈 영역 -->
+            <div style="height: 90vh; background-image: url('https://placehold.co/1920x1080/e6e6e6/000000?text=Premium+Order-Made+Jewelry'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center;">
+                
+                <div class="p-4" style="background-color: rgba(255, 255, 255, 0.7); backdrop-filter: blur(1px);">
+                    <h1 class="hero-title text-dark">
+                        Elegance is an Attitude.
+                    </h1>
+                    <p class="fs-4 text-secondary mb-4">
+                        누쿠앤코의 오더메이드 목걸이, 오직 당신만을 위한 섬세함.
+                    </p>
+                    <a href="#" class="btn btn-luxury mt-3">
+                        지금, 나만의 주얼리 디자인하기
+                    </a>
+                </div>
 
-        <div class="row">
-            <!-- Item 1 -->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card border-0">
-                    <img src="https://placehold.co/600x800/EAE7E2/333333?text=Scented+Candle" class="card-img-top" alt="향초">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">고요한 휴식의 향</h5>
-                        <p class="card-text">마음을 편안하게 하는 아로마 캔들</p>
-                    </div>
+            </div>
+        </section>
+
+        <!-- 3. 💍 주요 제품 소개 섹션 (오더메이드) -->
+        <section class="container text-center py-5 my-5">
+            <h2 class="hero-title fw-normal mb-3" style="font-size: 2.5rem;">
+                THE SIGNATURE COLLECTION
+            </h2>
+            <p class="lead text-muted mb-5">
+                당신의 스토리를 담은 단 하나의 목걸이. 장인의 손길로 완성됩니다.
+            </p>
+
+            <div class="row g-5">
+                <!-- 오더메이드 스텝 1 -->
+                <div class="col-md-4">
+                    <h3 class="fs-5 mb-3 fw-bold" style="letter-spacing: 0.1em;">CONCEPT</h3>
+                    <p class="text-secondary">AI와 상담하여 당신의 바이브와 영감을 디자인 초안으로 구현합니다.</p>
+                </div>
+                <!-- 오더메이드 스텝 2 -->
+                <div class="col-md-4">
+                    <h3 class="fs-5 mb-3 fw-bold" style="letter-spacing: 0.1em;">CRAFTMANSHIP</h3>
+                    <p class="text-secondary">수십 년 경력의 장인이 엄선된 재료로 섬세한 수제 작업을 진행합니다.</p>
+                </div>
+                <!-- 오더메이드 스텝 3 -->
+                <div class="col-md-4">
+                    <h3 class="fs-5 mb-3 fw-bold" style="letter-spacing: 0.1em;">DELIVERY</h3>
+                    <p class="text-secondary">고급스러운 포장과 함께 안전하게, 세상에 하나뿐인 작품을 전달합니다.</p>
                 </div>
             </div>
-            <!-- Item 2 -->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card border-0">
-                    <img src="https://placehold.co/600x800/D6CFCB/333333?text=Gourmet+Coffee" class="card-img-top" alt="커피">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">깊고 진한 풍미</h5>
-                        <p class="card-text">스페셜티 원두로 내린 드립 커피</p>
+        </section>
+        
+        <!-- 4. 🎁 확장성 섹션 (작은 사치 소품) -->
+        <section class="bg-light text-center py-5 mt-5">
+            <div class="container my-4">
+                <h2 class="hero-title fw-normal mb-3" style="font-size: 2.5rem;">
+                    SMALL LUXURY ITEMS
+                </h2>
+                <p class="lead text-muted mb-5">
+                    곧 다가올, 일상에 우아함을 더할 작은 사치 소품들을 미리 만나보세요.
+                </p>
+                
+                <!-- 상품 3개 미리보기 그리드 -->
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card h-100 border-0 bg-light">
+                            <img src="https://placehold.co/400x400/dddddd/000000?text=Candle" class="card-img-top" alt="작은 사치 소품 캔들" style="border-radius: 0;">
+                            <div class="card-body p-3">
+                                <h5 class="card-title fw-light mt-2">향기로운 시간, 캔들</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border-0 bg-light">
+                            <img src="https://placehold.co/400x400/dddddd/000000?text=Silk+Scarf" class="card-img-top" alt="작은 사치 소품 실크 스카프" style="border-radius: 0;">
+                            <div class="card-body p-3">
+                                <h5 class="card-title fw-light mt-2">부드러운 실크 스카프</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border-0 bg-light">
+                            <img src="https://placehold.co/400x400/dddddd/000000?text=Leather+Keyring" class="card-img-top" alt="작은 사치 소품 가죽 키링" style="border-radius: 0;">
+                            <div class="card-body p-3">
+                                <h5 class="card-title fw-light mt-2">고급 가죽 키링</h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                
+                <a href="#" class="btn btn-outline-dark btn-lg mt-5" style="border-radius: 0;">
+                    모든 작은 사치 소품 보러가기
+                </a>
             </div>
-            <!-- Item 3 -->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card border-0">
-                    <img src="https://placehold.co/600x800/C8D3D5/333333?text=Fine+Stationery" class="card-img-top" alt="문구">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">사유의 순간</h5>
-                        <p class="card-text">만년필로 기록하는 하루의 생각</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Item 4 -->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card border-0">
-                    <img src="https://placehold.co/600x800/F2EAD3/333333?text=Artisanal+Tea" class="card-img-top" alt="차">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">따뜻한 위로</h5>
-                        <p class="card-text">섬세하게 블렌딩된 프리미엄 티</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Item 5 -->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card border-0">
-                    <img src="https://placehold.co/600x800/DFD3C3/333333?text=A+Good+Book" class="card-img-top" alt="책">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">지적인 탐험</h5>
-                        <p class="card-text">오롯이 빠져드는 독서의 시간</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Item 6 -->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card border-0">
-                    <img src="https://placehold.co/600x800/E4E4E4/333333?text=Minimalist+Vase" class="card-img-top" alt="화병">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">공간의 미학</h5>
-                        <p class="card-text">계절의 꽃 한 송이를 위한 화병</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
+
     </main>
 
-    <!-- Footer -->
-    <footer class="text-center py-4 mt-5">
-        <p class="text-muted">&copy; 2025 My Little Luxuries. All Rights Reserved.</p>
+    <!-- 5. 🦶 푸터 (Footer): 미니멀하고 깨끗하게 -->
+    <footer class="text-center py-5 mt-5 border-top">
+        <div class="container">
+            <p class="text-muted mb-3" style="font-size: 0.9rem;">
+                NU:KO & CO. | 서울특별시 강남구 작은사치동 123-45 | E-mail: nuko.co @luxury.com
+            </p>
+            <p class="text-muted" style="font-size: 0.8rem;">
+                © 2025 NU:KO & CO. All rights reserved. 
+            </p>
+        </div>
     </footer>
 
+    <!-- 6. 📝 JS 파일 연결 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

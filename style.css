@@ -1,73 +1,87 @@
-/*
- *  style.css
- *  - '나만의 작은 사치' 웹사이트 커스텀 스타일
- *  - Hermes 스타일을 참고한 미니멀하고 고급스러운 디자인
- */
+        /* 폰트: 시스템 기본 폰트로 깔끔함을 극대화 */
+        body {
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', sans-serif;
+            background-color: #f8f8f8; /* 깨끗한 크림색/미색 배경 */
+            color: #111111; /* 짙은 검은색 텍스트 */
+        }
+        /* 로고/메뉴: 샤넬처럼 얇고 미니멀한 느낌 */
+        .navbar-brand, .nav-link {
+            font-weight: 300; /* Light 폰트 두께 */
+            font-size: 1.1rem;
+            letter-spacing: 0.1em; /* 자간 넓게 설정 */
+            text-transform: uppercase;
+        }
+        /* 메인 CTA 버튼: 절제된 포인트 컬러 (딥 블랙) */
+        .btn-luxury {
+            background-color: #000000;
+            border-color: #000000;
+            color: #ffffff;
+            padding: 1rem 3rem;
+            transition: background-color 0.3s;
+            border-radius: 0; /* 각진 디자인으로 고급스러움 강조 */
+        }
+        .btn-luxury:hover {
+            background-color: #333333;
+            border-color: #333333;
+            color: #ffffff;
+        }
+        /* 누쿠앤코 전용 버튼 스타일 */
+        .btn-primary-nuku {
+            display: inline-block;
+            background-color: #111111; /* 짙은 검은색 */
+            color: #ffffff;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            border: 1px solid #111111;
+        }
 
-:root {
-    --primary-bg-color: #FDFDFD;
-    --text-color: #333333;
-    --muted-color: #888888;
-    --border-color: #EAE7E2;
-    --header-font: 'Cormorant Garamond', serif;
-    --body-font: 'Noto Sans KR', sans-serif;
-}
+        .btn-primary-nuku:hover {
+            background-color: #333333;
+            color: #ffffff;
+            border-color: #333333;
+        }
+        /* 메인 비주얼 타이틀: 넓은 여백을 위해 폰트 사이즈 크게 */
+        .hero-title {
+            font-size: 3.5rem; /* 큰 글씨 */
+            font-weight: 200; /* 얇은 두께 */
+            letter-spacing: 0.2em; /* 넓은 자간 */
+            margin-bottom: 2rem;
+        }
+        /* 모바일 최적화 */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+                letter-spacing: 0.15em;
+            }
+            .btn-luxury {
+                padding: 0.8rem 2rem;
+            }
+        }
+        /* 메인 비주얼 타이틀: 넓은 여백을 위해 폰트 사이즈 크게 */
+        .hero-title {
+            font-size: 3.5rem; /* 큰 글씨 */
+            font-weight: 200; /* 얇은 두께 */
+            letter-spacing: 0.2em; /* 넓은 자간 */
+            margin-bottom: 2rem;
+        }
+        /* 모바일 최적화 */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+                letter-spacing: 0.15em;
+            }
+            .btn-luxury {
+                padding: 0.8rem 2rem;
+            }
+        }
 
-body {
-    font-family: var(--body-font);
-    background-color: var(--primary-bg-color);
-    color: var(--text-color);
-    font-weight: 300;
-}
-
-h1, h2, h3, h4, h5, h6, .navbar-brand, .display-4 {
-    font-family: var(--header-font);
-    font-weight: 600;
-}
-
-/* Navigation */
-.navbar {
-    border-bottom: 1px solid var(--border-color);
-    background-color: var(--primary-bg-color) !important;
-}
-
-.navbar-brand {
-    font-size: 1.75rem;
-    letter-spacing: 0.1em;
-}
-
-/* Main Content */
-.card {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-}
-
-.card-title {
-    font-size: 1.5rem;
-    margin-top: 1rem;
-    color: var(--text-color);
-}
-
-.card-text {
-    color: var(--muted-color);
-    font-size: 0.9rem;
-}
-
-.card-body {
-    padding: 1.5rem 1rem;
-}
-
-/* Footer */
-footer {
-    background-color: var(--primary-bg-color);
-    border-top: 1px solid var(--border-color);
-}
-
-footer p {
-    margin: 0;
-    font-size: 0.85rem;
-}
+        /* Navbar scrolled state */
+        .navbar-scrolled {
+            background-color: rgba(255, 255, 255, 0.95) !important; /* Slightly transparent white */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
