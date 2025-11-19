@@ -1,0 +1,124 @@
+
+{
+  "task_name": "Create a Luxury Jewelry Brand Ranking CRUD Page",
+  "output_file": "quests/publisings/concept_02/index.html",
+  "design_inspiration": {
+    "theme": "Hermès-inspired Luxury",
+    "palette": {
+      "primary": "#D97706",
+      "background": "#FDFBF8",
+      "surface": "#FFFFFF",
+      "text_primary": "#1F2937",
+      "text_secondary": "#6B7280",
+      "accent": "#E4A010"
+    },
+    "typography": {
+      "font_family_headings": "'Garamond', 'Times New Roman', serif",
+      "font_family_body": "'Inter', 'Helvetica Neue', sans-serif",
+      "font_size_base": "16px"
+    },
+    "layout_principles": [
+      "Minimalist and clean interface",
+      "Generous whitespace",
+      "Elegant, thin-line iconography",
+      "Focus on high-quality typography",
+      "Subtle animations and transitions"
+    ]
+  },
+  "layout_structure": {
+    "type": "Two-column",
+    "sidebar": {
+      "id": "admin-sidebar",
+      "title": "VibeCodings",
+      "logo_src": "path/to/hermes-style-logo.svg",
+      "menu_items": [
+        { "name": "Dashboard", "icon": "icon-dashboard", "link": "#" },
+        {
+          "name": "Jewelry Ranks",
+          "icon": "icon-diamond",
+          "link": "#",
+          "is_active": true
+        },
+        { "name": "Customer Insights", "icon": "icon-users", "link": "#" },
+        { "name": "Settings", "icon": "icon-settings", "link": "#" }
+      ]
+    },
+    "main_content": {
+      "id": "main-content-area",
+      "header": {
+        "title": "Jewelry Brand Ranking",
+        "breadcrumb": ["Admin", "Jewelry Ranks"],
+        "actions": [
+          {
+            "id": "add-new-brand-btn",
+            "label": "Add New Brand",
+            "icon": "icon-plus"
+          }
+        ]
+      },
+      "crud_section": {
+        "component_type": "Data Table",
+        "id": "brand-ranking-table",
+        "columns": [
+          { "key": "rank", "label": "Rank" },
+          { "key": "brand_name", "label": "Brand Name" },
+          { "key": "logo", "label": "Logo" },
+          { "key": "score", "label": "Preference Score" },
+          { "key": "last_updated", "label": "Last Updated" },
+          { "key": "actions", "label": "Actions" }
+        ],
+        "actions_column_buttons": [
+          { "id_prefix": "edit-btn-", "label": "Edit", "icon": "icon-edit" },
+          { "id_prefix": "delete-btn-", "label": "Delete", "icon": "icon-trash" }
+        ]
+      }
+    }
+  },
+  "components": {
+    "modals": [
+      {
+        "id": "brand-edit-modal",
+        "type": "Create/Update",
+        "title": "Add/Edit Brand",
+        "form_fields": [
+          { "name": "brand_name", "label": "Brand Name", "type": "text", "placeholder": "e.g., Cartier" },
+          { "name": "score", "label": "Preference Score", "type": "number", "placeholder": "e.g., 95.5" },
+          { "name": "logo_url", "label": "Logo Image URL", "type": "text", "placeholder": "https://path.to/logo.svg" }
+        ],
+        "actions": [
+          { "id": "save-brand-btn", "label": "Save Changes", "style": "primary" },
+          { "id": "cancel-btn", "label": "Cancel", "style": "secondary" }
+        ]
+      },
+      {
+        "id": "delete-confirm-modal",
+        "type": "Confirmation",
+        "title": "Confirm Deletion",
+        "message": "Are you sure you want to permanently delete this brand ranking? This action cannot be undone.",
+        "actions": [
+          { "id": "confirm-delete-btn", "label": "Delete", "style": "danger" },
+          { "id": "cancel-delete-btn", "label": "Cancel", "style": "secondary" }
+        ]
+      }
+    ]
+  },
+  "data_handling": {
+    "storage_method": "Local JSON Object",
+    "initial_data": [
+      { "id": 1, "rank": 1, "brand_name": "Cartier", "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Cartier_logo.svg/2560px-Cartier_logo.svg.png", "score": 98.2, "last_updated": "2025-11-18" },
+      { "id": 2, "rank": 2, "brand_name": "Tiffany & Co.", "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Tiffany_%26_Co._logo.svg/2560px-Tiffany_%26_Co._logo.svg.png", "score": 95.5, "last_updated": "2025-11-17" },
+      { "id": 3, "rank": 3, "brand_name": "Bvlgari", "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Bulgari_logo.svg/2560px-Bulgari_logo.svg.png", "score": 92.8, "last_updated": "2025-11-18" },
+      { "id": 4, "rank": 4, "brand_name": "Van Cleef & Arpels", "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Van_Cleef_%26_Arpels_logo.svg/2560px-Van_Cleef_%26_Arpels_logo.svg.png", "score": 91.0, "last_updated": "2025-11-16" },
+      { "id": 5, "rank": 5, "brand_name": "Hermès", "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Hermes_logo.svg/2560px-Hermes_logo.svg.png", "score": 89.7, "last_updated": "2025-11-19" }
+    ]
+  },
+  "functionality": {
+    "on_load": "renderTable() with initial_data.",
+    "renderTable": "Dynamically generate table rows from the data object. Logos should be rendered as small images.",
+    "create": "Clicking 'Add New Brand' opens the 'brand-edit-modal' with empty fields.",
+    "read": "Data is displayed in the main table.",
+    "update": "Clicking an 'Edit' button on a row opens the 'brand-edit-modal', pre-filled with that row's data.",
+    "delete": "Clicking a 'Delete' button opens the 'delete-confirm-modal'. On confirmation, the corresponding data row is removed and the table is re-rendered.",
+    "save": "In the modal, clicking 'Save Changes' either creates a new brand object or updates an existing one in the data object, then closes the modal and re-renders the table."
+  }
+}

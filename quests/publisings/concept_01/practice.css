@@ -1,0 +1,71 @@
+
+body {
+    font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', sans-serif;
+    background-color: #f0f8ff !important; /* 배경색을 연한 하늘색으로 강제 지정 */
+    color: #111111; 
+    line-height: 1.6;
+}
+
+/* 2. 상단 메뉴/로고 스타일 */
+.navbar-brand, .nav-link {
+    font-weight: 300; 
+    font-size: 1.1rem;
+    letter-spacing: 0.1em; 
+    text-transform: uppercase;
+}
+
+/* 3. 메인 제목 스타일 (빨간색 테스트) */
+.container-fluid h1 {
+    color: red !important; /* 🌟🌟🌟 이 부분이 제목을 빨간색으로 강제 지정! 🌟🌟🌟 */
+    font-weight: 200; /* 글자를 아주 얇게 */
+    letter-spacing: 0.2em; /* 글자 간격을 넓게 */
+    font-size: 2.5rem; /* 글자 크기를 조금 줄임 */
+}
+
+/* 4. 오렌지 버튼 스타일 */
+.btn-primary-nuku {
+    background-color: #e57200;
+    border-color: #e57200;
+    color: white;
+    padding: 15px 40px;
+    font-size: 1.25rem;
+    transition: background-color 0.3s;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+.btn-primary-nuku:hover {
+    background-color: #d16500;
+    border-color: #d16500;
+}
+
+
+/* practice.css 파일 맨 아래에 추가하세요! (새로운 이력) */
+.navbar-brand {
+    color: #e57200 !important; /* 로고 글자색을 버튼과 같은 오렌지색으로! */
+}
+
+
+/* practice.css 파일 맨 아래에 추가하세요! (새로운 이력) */
+.container-fluid > div.border {
+    /* 사진 공간 주변에 아주 은은한 그림자 추가 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* 마우스를 올리면 그림자가 더 진해지게 만들기 (고급스러운 인터랙션) */
+.container-fluid > div.border:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); 
+}
+
+/* practice.css 파일 맨 아래에 추가하세요! (새로운 이력) */
+.container-fluid > div.border:hover {
+    /* 기존 그림자 효과는 그대로 두고, 배경색을 아주 연한 오렌지색으로 바꿉니다. */
+    background-color: #fffaf0 !important; /* 연한 상아색/크림 오렌지색 */
+}
